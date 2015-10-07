@@ -13,4 +13,6 @@ The modules inside of this package are picked with useful features for the progr
 
 ---
 
-Full documentation can be found in the ``docs/build/html` folder.
+Full documentation can be found in the `docs/build/html` folder.
+
+_This package was built with Python 3.4_
