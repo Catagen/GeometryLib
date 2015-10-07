@@ -1,6 +1,6 @@
 #GeometryLib
 
-_GeometryLib is a school related project/assignment with the focus on tests and documentation_
+_GeometryLib is a school related project/assignment with the focus on tests and documentation._
 
 Routines for working with triangles.
 The modules inside of this package are picked with useful features for the programmer who needs to support triangles.
