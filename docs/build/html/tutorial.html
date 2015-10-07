@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Tutorial &mdash; geometryLib 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="geometryLib 1.0 documentation" href="index.html" />
+    <link rel="next" title="Guide" href="guide.html" />
+    <link rel="prev" title="Welcome to geometryLib’s documentation!" href="index.html" />
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+
+  </head>
+  <body role="document">  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="tutorial">
+<h1>Tutorial<a class="headerlink" href="#tutorial" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>“There is no royal road to geometry.” — Euclid</div></blockquote>
+<p>This module makes triangle processing fun!
+The beginner will enjoy how the <a class="reference internal" href="api.html#module-geometrylib.utils" title="geometrylib.utils"><code class="xref py py-class docutils literal"><span class="pre">geometrylib.utils</span></code></a> module
+lets you get started quickly.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">geometrylib</span> <span class="kn">import</span> <span class="n">utils</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">utils</span><span class="o">.</span><span class="n">is_isosceles</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+<p>But fancier programmers can use the Triangle
+class to create an actual triangle object
+upon which they can then perform lots of operations.
+For example, consider this Python program:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">geometrylib.shape</span> <span class="kn">import</span> <span class="n">Triangle</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">Triangle</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="k">print</span> <span class="p">(</span><span class="s">&#39;Equilateral?&#39;</span><span class="p">,</span> <span class="n">t</span><span class="o">.</span><span class="n">is_equilateral</span><span class="p">())</span>
+<span class="k">print</span> <span class="p">(</span><span class="s">&#39;Isosceles?&#39;</span><span class="p">,</span> <span class="n">t</span><span class="o">.</span><span class="n">is_isosceles</span><span class="p">())</span>
+</pre></div>
+</div>
+<p>Since methods <a class="reference internal" href="api.html#geometrylib.shape.Triangle.is_equilateral" title="geometrylib.shape.Triangle.is_equilateral"><code class="xref py py-func docutils literal"><span class="pre">is_equilateral()</span></code></a>
+return Boolean values, this program will produce the following output:</p>
+<div class="highlight-none"><div class="highlight"><pre>Equilateral? True
+Isosceles? True
+</pre></div>
+</div>
+<p>Read the <a class="reference external" href="guide.html">guide</a> to learn more!</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">This module only handles three-sided polygons;
+five-sided figures are right out.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">Welcome to geometryLib&#8217;s documentation!</a></li>
+      <li>Next: <a href="guide.html" title="next chapter">Guide</a></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/tutorial.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2015, Szymon Stypa.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.6</a>
+      
+      |
+      <a href="_sources/tutorial.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

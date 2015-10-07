@@ -1,0 +1,199 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>The geometryLib API reference &mdash; geometryLib 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="geometryLib 1.0 documentation" href="index.html" />
+    <link rel="prev" title="Guide" href="guide.html" />
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+
+  </head>
+  <body role="document">  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-geometrylib">
+<span id="the-geometrylib-api-reference"></span><h1>The geometryLib API reference<a class="headerlink" href="#module-geometrylib" title="Permalink to this headline">¶</a></h1>
+<p>Routines for working with triangles.</p>
+<p>The modules inside of this package are picked with useful features for the programmer who needs to support triangles:</p>
+<dl class="docutils">
+<dt><code class="docutils literal"><span class="pre">shape</span></code></dt>
+<dd>This module provides a full-fledged Triangle object that can be instantiated and then asked to provide all sorts of information about its properties.</dd>
+<dt><code class="docutils literal"><span class="pre">utils</span></code></dt>
+<dd>For the programmer in a hurry, this module offers quick functions that take as arguments the three side lengths of a triangle, and performs a quick conputation without the programmer having to make the extra step of creating an object</dd>
+</dl>
+<div class="section" id="module-geometrylib.shape">
+<span id="the-shape-module"></span><h2>The &#8220;shape&#8221; module<a class="headerlink" href="#module-geometrylib.shape" title="Permalink to this headline">¶</a></h2>
+<p>Use the triangle class to represent triangles</p>
+<dl class="class">
+<dt id="geometrylib.shape.Triangle">
+<em class="property">class </em><code class="descclassname">geometrylib.shape.</code><code class="descname">Triangle</code><span class="sig-paren">(</span><em>a</em>, <em>b</em>, <em>c</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geometrylib/shape.html#Triangle"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#geometrylib.shape.Triangle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Triangles are three sided polygons</p>
+<dl class="method">
+<dt id="geometrylib.shape.Triangle.area">
+<code class="descname">area</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/geometrylib/shape.html#Triangle.area"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#geometrylib.shape.Triangle.area" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the area of the triangle</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geometrylib.shape.Triangle.is_equilateral">
+<code class="descname">is_equilateral</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/geometrylib/shape.html#Triangle.is_equilateral"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#geometrylib.shape.Triangle.is_equilateral" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return wether this triangle is equilateral</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geometrylib.shape.Triangle.is_isosceles">
+<code class="descname">is_isosceles</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/geometrylib/shape.html#Triangle.is_isosceles"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#geometrylib.shape.Triangle.is_isosceles" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return wether this triangle is isosceles</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geometrylib.shape.Triangle.is_similar">
+<code class="descname">is_similar</code><span class="sig-paren">(</span><em>triangle</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geometrylib/shape.html#Triangle.is_similar"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#geometrylib.shape.Triangle.is_similar" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return wether this triangle is similar to another</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geometrylib.shape.Triangle.perimeter">
+<code class="descname">perimeter</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/geometrylib/shape.html#Triangle.perimeter"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#geometrylib.shape.Triangle.perimeter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the perimeter of the triangle</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geometrylib.shape.Triangle.scale">
+<code class="descname">scale</code><span class="sig-paren">(</span><em>factor</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geometrylib/shape.html#Triangle.scale"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#geometrylib.shape.Triangle.scale" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a new triangle, &#8216;factor&#8217; times the size of this one</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-geometrylib.utils">
+<span id="the-utils-module"></span><h2>The &#8220;utils&#8221; module<a class="headerlink" href="#module-geometrylib.utils" title="Permalink to this headline">¶</a></h2>
+<p>Routines to test triangle properties without explicit instantiation.</p>
+<dl class="function">
+<dt id="geometrylib.utils.compute_area">
+<code class="descclassname">geometrylib.utils.</code><code class="descname">compute_area</code><span class="sig-paren">(</span><em>a</em>, <em>b</em>, <em>c</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geometrylib/utils.html#compute_area"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#geometrylib.utils.compute_area" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the area of the triangle with side lengths <cite>a</cite>, <cite>b</cite> and <cite>c</cite>.</p>
+<p>If the three lengths provided cannot form a triangle,
+then the area 0 is returned.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="geometrylib.utils.compute_perimiter">
+<code class="descclassname">geometrylib.utils.</code><code class="descname">compute_perimiter</code><span class="sig-paren">(</span><em>a</em>, <em>b</em>, <em>c</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geometrylib/utils.html#compute_perimiter"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#geometrylib.utils.compute_perimiter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the perimeter of the triangle with side lengths <cite>a</cite>, <cite>b</cite> and <cite>c</cite>.</p>
+<p>If the three lengths provided cannot form a triangle,
+then the perimeter 0 is returned.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="geometrylib.utils.is_equilateral">
+<code class="descclassname">geometrylib.utils.</code><code class="descname">is_equilateral</code><span class="sig-paren">(</span><em>a</em>, <em>b</em>, <em>c</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geometrylib/utils.html#is_equilateral"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#geometrylib.utils.is_equilateral" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return whether lengths <cite>a</cite>, <cite>b</cite> and <cite>c</cite> are an equilateral triangle.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="geometrylib.utils.is_isosceles">
+<code class="descclassname">geometrylib.utils.</code><code class="descname">is_isosceles</code><span class="sig-paren">(</span><em>a</em>, <em>b</em>, <em>c</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geometrylib/utils.html#is_isosceles"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#geometrylib.utils.is_isosceles" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return whether lengths <cite>a</cite>, <cite>b</cite> and <cite>c</cite> are an isosceles triangle.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="geometrylib.utils.is_triangle">
+<code class="descclassname">geometrylib.utils.</code><code class="descname">is_triangle</code><span class="sig-paren">(</span><em>a</em>, <em>b</em>, <em>c</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/geometrylib/utils.html#is_triangle"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#geometrylib.utils.is_triangle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test whether lengths <cite>a</cite>, <cite>b</cite> and <cite>c</cite> can be the sides of a triangle.</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">The geometryLib API reference</a><ul>
+<li><a class="reference internal" href="#module-geometrylib.shape">The &#8220;shape&#8221; module</a></li>
+<li><a class="reference internal" href="#module-geometrylib.utils">The &#8220;utils&#8221; module</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="guide.html" title="previous chapter">Guide</a></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/api.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2015, Szymon Stypa.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.6</a>
+      
+      |
+      <a href="_sources/api.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
